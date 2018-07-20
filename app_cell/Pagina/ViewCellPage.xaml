@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="app_cell.Pagina.ViewCellPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lsvFuncionarios" HasUnevenRows="true">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10" Orientation="Horizontal">
+                                <Label Text="{Binding Nome}" FontAttributes="Bold" TextColor="Coral" />
+                                <Label Text="{Binding Cargo}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                
+            </ListView>
+            <TableView>
+                <TableView.Root>
+                    <TableSection Title="Cadastro">
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Comentário" />
+                                <Editor HorizontalOptions="FillAndExpand" HeightRequest="250" />
+                                
+                            </StackLayout>
+                             
+                        </ViewCell>
+                        
+                    </TableSection>
+                </TableView.Root>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
